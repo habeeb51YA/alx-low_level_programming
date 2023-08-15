@@ -1,4 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
+#include "main.h"
+
+/*function main to print _putchari*/
 
 int main(void)
 {
