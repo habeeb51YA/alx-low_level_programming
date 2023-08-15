@@ -1,8 +1,11 @@
 #include <stdio.h>
 #include "main.h"
 
-/*function main to print _putchari*/
-
+/**
+ * main - Prints _putchar on a new line
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
 printf("_putchar\n");
