@@ -11,6 +11,6 @@ void print_alphabet(void)
 char dd = 'a';
 while (dd <= 'z')
 printf("%c", dd);
-dd++
+dd++;
 }
 
