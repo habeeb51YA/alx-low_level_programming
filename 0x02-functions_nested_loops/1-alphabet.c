@@ -11,6 +11,5 @@ void print_alphabet(void)
 char dd;
 for (dd = 'a'; dd <= 'z'; ++dd)
 printf("%c\n", dd);
-return (0);
 }
 
