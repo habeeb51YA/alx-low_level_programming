@@ -8,9 +8,9 @@
  */
 void print_alphabet(void)
 {
-char dd;
-for (dd = 'a'; dd <= 'z'; ++dd)
+char dd = 'a';
+while (dd <= 'z')
 printf("%c", dd);
-
+dd++
 }
 
