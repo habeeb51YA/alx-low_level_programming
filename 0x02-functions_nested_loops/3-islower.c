@@ -1,34 +1,15 @@
-#include <stdio.h>
-#include <ctype.h>
+#include "main.h"
 
 /**
- * _islower - Prints _islower on a new line
- *
- * Return: Always 0.
+ * _islower - check if char is lowercase
+ * @c: is the char to be checked
+ * Return: 1 if char is lowercase, otherwise 0.
  */
 
 int _islower(int c)
 {
-return (islower(c));
-}
-
-/**
- * main  - ckeck and prints lower case on a new line
- *
- * Return: Always 0.
- */
-
-int main(void)
-{
-char testChar = 'a';
-if (_islower(testChar))
-{
-printf("%c is a lowercase character.\n", testChar);
-}
-else
-{
-printf("%c is not a lowercase character.\n", testChar);
-}
-
-return (0);
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
 }
