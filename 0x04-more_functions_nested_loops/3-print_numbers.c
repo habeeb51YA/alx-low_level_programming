@@ -17,5 +17,4 @@ void print_numbers(int num1, int num2)
 		printf("%d", i);
 	}
 	printf("\n");
-	return (0);
 }
