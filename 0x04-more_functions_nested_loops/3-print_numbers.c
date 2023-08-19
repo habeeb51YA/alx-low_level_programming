@@ -2,13 +2,11 @@
 
 /**
  * print_numbers - prinnt numbers 0 - 9
- * @num1: interger 1
- * @num2: interger 2
  *
  * Return: Always 0.
  */
 
-void print_numbers(int num1, int num2)
+void print_numbers()
 {
 	int i;
 
@@ -17,4 +15,16 @@ void print_numbers(int num1, int num2)
 		printf("%d", i);
 	}
 	printf("\n");
+}
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+
+int main(void)
+{
+	print_numbers();
+	return (0);
 }
