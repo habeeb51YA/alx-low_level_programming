@@ -3,11 +3,11 @@
 #include <string.h>
 
 /**
- * reverse_string - Reverses a string in place.
+ * rev_string - Reverses a string in place.
  * @s: Pointer to the string.
  */
 
-void reverse_string(char *s)
+void rev_string(char *s)
 {
 	int length = strlen(s);
 	int start = 0;
