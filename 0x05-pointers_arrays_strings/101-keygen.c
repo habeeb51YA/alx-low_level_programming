@@ -25,7 +25,8 @@ char random_digit() {
 
 // Function to generate a random valid password
 void generate_password(char *password, int length) {
-    for (int i = 0; i < length; i++) {
+   int i; 
+   for ( i = 0; i < length; i++) {
         int choice = random_int(0, 2);
         if (choice == 0) {
             password[i] = random_lowercase();
