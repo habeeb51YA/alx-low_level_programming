@@ -16,7 +16,7 @@ char *_strpbrk(char *s, char *accept)
 	{
 		char *a;
 
-		for (*a = accept; *a != '\0'; a++)
+		for (a = accept; *a != '\0'; a++)
 		{
 			if (*s == *a)
 			{
