@@ -14,22 +14,20 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
+	char *concatenated;
+	int len1 = (s1 != NULL) ? strlen(s1) : 0;
+	int len2 = (s2 != NULL) ? strlen(s2) : 0;
+	int total_len = len1 + len2 + 1;
 
-	int len1 = strlen(s1);
-	int len2 = strlen(s2);
-	int total_len = len1 + len2;
-
-	char *concatenated = malloc(total_len + 1);
+	concatenated = (char *)malloc(total_len * sizeof(char));
 
 	if (concatenated == NULL)
 		return (NULL);
 
-	strcpy(concatenated, s1);
-	strcat(concatenated, s2);
+	if (s1 != NULL)
+		strcpy(concatenated, s1);
+	if (s2 != NULL)
+		strcat(concatenated, s2);
 
 	return (concatenated);
 }
