@@ -1,34 +1,44 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
- * print_grid - prints a grid of integers
- * @grid: the address of the two dimensional grid
- * @width: width of the grid
- * @height: height of the grid
+ * alloc_grid - Allocates a 2D grid of integers.
+ * @width: Width of the grid.
+ * @height: Height of the grid.
  *
- * Return: Nothing.
+ * Return: A pointer to the allocated grid, or NULL on failure.
  */
+int **alloc_grid(int width, int height)
 
-void print_grid(int **grid, int width, int height)
 {
-	int w;
-	int h;
+	int **grid;
+	int i, j;
 
-	h = 0;
-	while (h < height)
+	if (width <= 0 || height <= 0)
+		return (NULL);
+
+	grid = (int **)malloc(sizeof(int *) * height);
+
+	if (grid == NULL)
+		return (NULL);
+
+	for (i = 0; i < height; i++)
 	{
-		w = 0;
-
-		while (w < width)
+		grid[i] = (int *)malloc(sizeof(int) * width);
+	if (grid[i] == NULL)
+	{
+		for (j = 0; j < i; j++)
 		{
-			printf("%d ", grid[h][w]);
-			w++;
+			free(grid[j]);
 		}
-
-		printf("\n");
-		h++;
+		free(grid);
+		return (NULL);
 	}
-}
+		for (j = 0; j < width; j++)
+		{
+			grid[i][j] = 0;
+		}
+	}
 
+	return (grid);
+}
