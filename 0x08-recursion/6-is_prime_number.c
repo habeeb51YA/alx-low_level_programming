@@ -3,6 +3,7 @@
 /**
  * is_prime_number - Checks if a number is prime.
  * @n: The number to check for primality.
+ * @i: The current divisor.
  *
  * Return: 1 if n is a prime number, 0 otherwise.
  */

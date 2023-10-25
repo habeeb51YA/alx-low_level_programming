@@ -3,10 +3,10 @@
 /**
  * _sqrt_recursion - Returns the natural square root of a number.
  * @n: The number to find the square root of.
- *
+ * @i: The current candidate.
  * Return: The natural square root of the number.
  */
-int _sqrt_recursion(int n)
+int _sqrt_recursion(int n, int i)
 {
 	return (find_sqrt(n, 1));
 }
